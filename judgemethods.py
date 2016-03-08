@@ -46,7 +46,7 @@ def wordBags(post):
 @judge_method_logger
 def txNlpTextJudge(post):
     """
-    Text emotion analyze provided by Tencent
+    Sentiment analyze provided by Tencent
     Page:http://nlp.qq.com/semantic.cgi#page4
     :param post:
     :return:
