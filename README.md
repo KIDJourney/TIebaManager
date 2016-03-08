@@ -1,7 +1,7 @@
 # TiebaManager
-Auto manage tool for baidu tieba .
+Auto moderation tool for baidu tieba .
 
-There are still many unexcept situations unhandled , just a simple and crude demo to do basic job.
+There are still many unhandled exceptions, this is just a simple and crude demo.
 
 ## Requirements
 * Python3
@@ -10,12 +10,11 @@ There are still many unexcept situations unhandled , just a simple and crude dem
 * python redis module
 * redis
 
-Tested in only *linux* .
+Tested on Linux only.
 
 ## Install
 
-After you satisfy the requirements .
-Make sure your redis has default configure .
+First, install the required packages. Then, make sure your redis server is using default configuration.
 
 ### Step 0
 Clone the Repo .
@@ -23,37 +22,39 @@ Clone the Repo .
 $ git clone https://github.com/KIDJourney/TiebaManager
 ```
 ### Step 1
-Edit ```config.example.ini``` to add your cookie and managed bar . Then
 ```
 $ mv config.example.ini config.ini
 ```
+
+Then, edit ```config.example.ini``` to with your cookie and the tieba to manage.
+
 ### Step 2
 ```
 $ python3 main.py 
 ```
-You can use ```Tmux``` or something similar to run it in backgroud .
+You can use ```tmux``` or something similar to run it in the backgroud .
 
-## Judge Method
+## Moderation Method
 
-You can implement your own judge method in ```judgemethods.py``` .
+You can implement your own moderation method in ```judgemethods.py``` .
 
-There are two kind of method you can write yourself .
+There are two kinds of methods available
 
-### Post judge method
+### Post moderation method
 
-The method is implemented as a function . Accept a ```Post``` object as argument .
+The method is implemented as a function, accepting a ```Post``` object as argument .
 
-Make sure you register your method with the ```post_method``` decorator.
+Make sure to register your method with the ```post_method``` decorator.
 
-### Reply judge method
+### Reply moderation method
 
-The method is implemented as a function . Accept a ```Reply``` object as argument .
+The method is implemented as a function, accepting a ```Reply``` object as argument .
 
-Make sure you register your method with the ```reply_method``` decorator.
+Make sure ou register your method with the ```reply_method``` decorator.
 
 ## Warning
 
-The Project is still in develop , some of code may be refactored frequently.
+The Project is still in development, some of code may be refactored frequently.
 
 ## Licenses
 [Apache licenses](http://choosealicense.com/licenses/apache-2.0/)
