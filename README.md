@@ -26,7 +26,7 @@ $ git clone https://github.com/KIDJourney/TiebaManager
 $ mv config.example.ini config.ini
 ```
 
-Then, edit ```config.example.ini``` to with your cookie and the tieba to manage.
+Then, edit ```config.ini``` to with your cookie and the tieba to manage.
 
 ### Step 2
 ```
